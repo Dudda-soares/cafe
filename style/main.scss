@@ -1,0 +1,381 @@
+@use './base.scss';
+@use './layout.scss';
+@use './variaveis.scss' as v;
+
+
+
+
+@mixin responsive($breakpoint){
+    @if $breakpoint == tablet {
+        @media screen and (max-width: v.$tablet) {
+            @content;
+        }
+    } @else if $breakpoint == mobile {
+        @media screen and (max-width: v.$mobile) {
+            @content;
+        }
+    }
+}
+
+#header{
+    background-color: v.$corPrincipal;
+    
+
+    .title {
+        margin: 18px 0;
+        color: #eee;
+        font-family: v.$fonteTitle;
+        font-size: 3em;
+
+        &__link{
+            font-family: v.$fonteTxt;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: v.$cortxt;
+            border: 1px solid white;
+            padding: 6px;
+            border-radius: 9px;
+        }
+        
+    }
+}
+.sobre-a-loja{
+    
+    
+    .container{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        
+    }
+
+    .home{
+        display: flex;
+        flex-direction: column;
+        padding: 26px;
+        gap: 41px;
+       
+        background-color: rgba(89, 44, 40, 0.7450980392);;
+        border-radius: 8px;
+    
+        &__img{
+            max-width: 600px;
+            width: 55%;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 3px solid white;
+        }
+        &__title{
+            color: #e0e0e0;
+            text-shadow: 1px 1px 3px #2b2a2a;
+            font-size: 1.7em;
+        }
+        &__txt{
+            color: #e3dbdb;
+            font-family: v.$fonteTxt;
+            font-size: 1em;
+            text-shadow: 2px 3px 16px #3b3b3b;
+        }
+    }
+}
+
+
+.secao-principal{
+    padding: 30px;
+   
+    .container{
+        background-color: v.$corProdutos;
+        padding: 20px;
+        border-radius: 3%;
+        border:1px solid white;
+        width: 55%;
+    }
+    
+    .produtos {
+        max-width: 800px;
+        width: 100%;
+        margin: 45px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1%;
+    }
+    
+    .produto {
+
+        margin-bottom: 30px;
+        border: 1px solid black;
+        padding: 12px;
+        background-color: #fffefe;
+        cursor: pointer;
+        
+        &:hover{
+            transform: scale(1.02);
+        }
+    
+        &__imagem { /* elemento */
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        &__nome { /* elemento */
+            font-size: 1.2em;
+            margin: 8px 0;
+            color: #3b3b3b;
+        }
+        
+        &__descricao { /* elemento */
+            color: gray;
+        }
+        
+        &__em--destaque { /* modificador */
+            border: 2px solid v.$cortxt;
+            padding: 8px;
+            background-color: v.$corContato;
+          
+            &-descricao{
+                color: rgb(83, 83, 83);
+            }
+        }
+        
+        /* bloco */
+    
+    }
+}
+
+#fale-conosco{
+    
+    display: flex;
+    justify-self: center;
+    width: 58%;
+}
+.contato {
+    background-color: v.$corProdutos;
+    width: 92%;
+    border: 1px solid white;
+    border-radius: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 16px;
+    margin: 20px;
+    height: 474px;
+
+
+    .form{
+
+        display: grid;
+        padding: 23px;
+        background-color: #592c28;
+        border-radius: 16px;
+        
+
+        &__label {
+            margin-top: 20px;
+            color: v.$cortxt;
+        }
+        &__check{
+            margin-top: 20px;
+            color: v.$cortxt;
+
+            
+        }
+        &__btn{
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+}
+.midia{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #592c28;
+    border-radius: 16px;
+
+    &__social{
+        width: 16%;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.02);
+        }
+    
+
+    }
+}
+.rodape{
+    background-color: v.$corPrincipal;
+    padding: 20px;
+    color: v.$cortxt;
+   
+}
+ 
+@include responsive(tablet) {
+
+    #header {
+
+        .container {
+            width: 80%;
+            display: grid;
+            justify-content: center;
+            font-size: 1em;
+            padding-bottom: 18px;
+        }    
+    }
+    .sobre-a-loja{
+        .container{
+            width: 85%;
+        }
+    
+        .home{
+           
+
+                width: 83%;
+                margin: 10px auto;
+            &__img{
+                max-width: 429px;
+                width: 100%;
+            }
+            
+        }
+    }
+    .secao-principal{
+        padding: 1px;
+       
+        .container{
+            width: 78%;
+           
+
+        }
+        
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            
+        }
+        
+    }
+    #fale-conosco{
+    
+        
+        justify-self: center;
+        width: 89%;
+        
+
+        .contato {
+
+            width: 127%;
+        }
+    }
+    .midia{
+        width: 30%;
+    }
+    
+    
+
+    
+}
+
+@include responsive(mobile) {
+
+    
+
+    #header {
+
+    
+        .container {
+            width: 80%;
+            display: grid;
+            justify-content: center;
+            font-size: 0.8em;
+            padding-bottom: 18px;
+        }
+      
+        li {
+            display: inline;
+            margin-top: 3px;
+        }   
+    
+    }
+    .sobre-a-loja{
+    
+
+        .container{
+            display: block;
+            
+            
+        }
+    
+        .home{
+
+            width: 83%;
+            margin-bottom: 10px;
+            
+            &__img{
+                max-width: 414px;
+                width: 95%;
+                
+            }
+            
+        }
+    }
+    
+    
+    .secao-principal{
+        padding: 1px;
+       
+        .container{
+            width: 74%;
+            border-radius: 8px;
+
+        }
+        
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 1%;
+        }
+        &__imagem { /* elemento */
+            width: 100%;
+        }
+        
+        &__nome { /* elemento */
+            font-size: 1em;
+            margin: 8px 0;
+        }
+    }
+    #fale-conosco{
+            width: 94%;
+            border-radius: 18px;
+
+        .contato {
+            display: block;
+            padding: 16px;
+            width: 127%;
+            height: 711px;
+        }
+        
+        .form{
+            height: 450px;
+         }
+    }
+    .midia{
+        
+        padding: 10px;
+        width: 94%;
+        align-items: center;
+        margin-top: 10px;
+        
+
+        &__social{
+            cursor: pointer;
+            width: 7%;
+            margin-top: 10px;
+        }
+    
+    }
+   
+   
+    
+}

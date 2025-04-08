@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café & Prosa</title>
+    <link rel="shortcut icon" href="./img/icon/grao-de-cafe.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./build/main.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <h1 class="title"> Café & Prosa </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="title__link" href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a class="title__link" href="#produtos">Produtos</a>
+                    </li>
+                    <li>
+                        <a class="title__link" href="#fale-conosco">Contatos</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    <section id="home" class="sobre-a-loja">
+        <div class="container">
+            <img class="home__img" src="./img/street-cafe-4472312_1280.jpg" alt="">
+            <div class="home">
+              
+                <h1 class="titleh1 home__title">Sobre a loja</h1>
+            <p class="home__txt">Bem-vindo à nossa cafeteria, um espaço aconchegante onde cada xícara conta uma história. Aqui, servimos cafés especiais, acompanhados de deliciosos quitutes artesanais, em um ambiente feito para você relaxar e aproveitar cada momento. Nosso compromisso é proporcionar sabor, qualidade e um atendimento acolhedor. Venha nos visitar e descubra o prazer de um bom café! ☕✨
+
+            </p>
+            </div>
+            
+        </div>  
+    </section>
+    <section id="produtos" class="secao-principal">
+        <div class="container">
+            <h1 class="titleh1">Produtos</h1>
+            <div class="produtos">
+                <div class="produto">
+                    <img class="produto__imagem" src="./img/coffee-2139592_640.jpg">
+                    <h4 class="produto__nome">Café Filtrado Rústico</h4>
+                    <p class="produto__descricao">
+                        Extraído pelo método tradicional, preservando o sabor puro e autêntico do café. Perfeito para quem aprecia uma bebida rica e aromática.
+                    </p>
+                </div>
+                <div class="produto produto__em--destaque">
+                    <img class="produto__imagem" src="./img/coffee-4618705_640.jpg">
+                    <h4 class="produto__nome">Latte Art Gourmet</h4>
+                    <p class="produto__em--destaque-descricao">
+                        Espresso encorpado com leite vaporizado, formando desenhos artísticos na superfície. Uma experiência saborosa e visualmente irresistível.
+                    </p>
+                </div>
+                <div class="produto">
+                    <img class="produto__imagem" src="./img/coffee-5589036_640.jpg">
+                    <h4 class="produto__nome">Cappuccino Aveludado</h4>
+                    <p class="produto__descricao">
+                        Um café cremoso e equilibrado, coberto com espuma de leite suave e um toque de cacau. Ideal para um momento de aconchego.
+                    </p>
+                </div>
+                <div class="produto">
+                    <img class="produto__imagem" src="./img/cup-6854258_640.jpg">
+                    <h4 class="produto__nome">Café Clássico da Casa</h4>
+                    <p class="produto__descricao">
+                        Uma xícara de café fumegante em uma louça clássica, colocada sobre uma mesa de vidro, remetendo a uma experiência autêntica e caseira.
+                    </p>
+                </div>
+                <div class="produto">
+                    <img class="produto__imagem" src="./img/coffe-roma.jpg">
+                    <h4 class="produto__nome">Café Espresso Intenso</h4>
+                    <p class="produto__descricao">
+                        Uma xícara de café preto servida sobre uma superfície repleta de grãos de café, destacando a pureza e intensidade do sabor. 
+                    </p>
+                </div>
+                <div class="produto">
+                    <img class="produto__imagem" src="./img/coffe-canela.jpg">
+                    <h4 class="produto__nome">Cappuccino Especiado</h4>
+                    <p class="produto__descricao">
+                        Uma xícara de café com latte art servida em um ambiente aconchegante, acompanhada de biscoitos e especiarias como canela e anis estrelado. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="fale-conosco" >
+        <div class="contato container">
+            <form class="form">
+                <h2 class="titleh1 form__title">Entre em contato</h2>
+                <label class="form__label" for="nome">Seu nome:</label>
+                <input class="form__input" type="text" name="nome" />
+                <label for="email"class="form__label">Seu e-mail </label>
+                <input id="email" type="email" class="form__input">
+                <label for="mensagem"class="form__label">Sua Mensagem:</label>
+                <textarea  id="mensagem" class="form__input"></textarea>
+                <div class="form__check">
+                    <input class="form__check-action" type="checkbox" id="aceito-termos">
+                    <label class="form__termos" for="aceito-termos">Li e concordo com os termos do site</label>
+                    
+                </div>
+                <button class="form__btn">Enviar</button>
+            </form> 
+            <div class="midia">
+                <h1 class="titleh1">Redes Sociais: </h1>
+                <img class="midia__social" src="./img/icon/github.svg" alt="github">
+                <img class="midia__social" src="./img/icon/linkedin.svg" alt="linkedin">
+                <img class="midia__social" src="./img/icon/instagram.svg" alt="instagram"/>
+                <img class="midia__social" src="./img/icon/mail.svg" alt="e-mail"/>
+                
+            </div> 
+        </div>
+    </section>
+    <footer class="rodape" >
+        <div class="container"> 
+            <p>
+               2025 &copy; Eduarda Soares - Todos os direitos Reservados
+            </p>
+        </div>
+    </footer>
+   
+</body>
+</html>
